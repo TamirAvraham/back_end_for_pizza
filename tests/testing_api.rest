@@ -1,0 +1,12 @@
+GET http://localhost:6000/ HTTP/1.1
+
+POST http://localhost:6000/NewPizza HTTP/1.1
+
+{
+    "name":"test"
+    "price":3.5
+    "png_path:"none"
+    "toppings": {"name":"olives","amount":1,"location":1.0,"price":3.5}
+    "size":1
+}
+
