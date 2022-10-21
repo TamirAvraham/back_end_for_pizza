@@ -16,6 +16,6 @@ func main() {
 
 	routes.UserRouter(router)
 
-	router.Run("192.168.14.155:6000")
+	router.Run("127.0.0.1:8080")
 
 }

@@ -16,4 +16,5 @@ func UserRouter(router *gin.Engine) {
 	router.POST("/NewOrderWithNewPizza", controllers.CreateOrderWithNewPizza())
 	router.GET("/GetOrders", controllers.GetAllOrders())
 	router.DELETE("/DeleteOrder/:id", controllers.DeleteOrder())
+	router.OPTIONS("/GetAllPizzas", controllers.CORS())
 }
