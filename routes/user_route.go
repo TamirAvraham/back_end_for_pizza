@@ -9,7 +9,9 @@ import (
 func UserRouter(router *gin.Engine) {
 	router.POST("/NewPizza", controllers.CreatePizza())
 	router.GET("/GetPizza/:id", controllers.GetPizza())
+	router.OPTIONS("/GetPizza/:id", controllers.CORS())
 	router.PUT("/UpdatePizza/:id", controllers.EditPizza())
+	router.OPTIONS("/UpdatePizza/:id", controllers.CORS())
 	router.DELETE("/DeletePizza/:id", controllers.DeletePizza())
 	router.GET("/GetAllPizzas", controllers.GetAllPizzas())
 	router.POST("/NewOrder/:pizzaId", controllers.CreateOrder())
@@ -17,4 +19,5 @@ func UserRouter(router *gin.Engine) {
 	router.GET("/GetOrders", controllers.GetAllOrders())
 	router.DELETE("/DeleteOrder/:id", controllers.DeleteOrder())
 	router.OPTIONS("/GetAllPizzas", controllers.CORS())
+
 }
