@@ -8,6 +8,7 @@ import (
 
 func UserRouter(router *gin.Engine) {
 	router.POST("/NewPizza", controllers.CreatePizza())
+	router.OPTIONS("/NewPizza", controllers.CORS())
 	router.GET("/GetPizza/:id", controllers.GetPizza())
 	router.OPTIONS("/GetPizza/:id", controllers.CORS())
 	router.PUT("/UpdatePizza/:id", controllers.EditPizza())
