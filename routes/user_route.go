@@ -21,4 +21,10 @@ func UserRouter(router *gin.Engine) {
 	router.DELETE("/DeleteOrder/:id", controllers.DeleteOrder())
 	router.OPTIONS("/GetAllPizzas", controllers.CORS())
 
+	router.POST("/NewComplexOrder", controllers.CreateNewComplexOrder())
+	router.GET("/GetComplexOrders", controllers.GetAllComplexOrders())
+	router.DELETE("/DeleteComplexOrder/:id", controllers.DeleteComplexOrder())
+	router.OPTIONS("/NewComplexOrder", controllers.CORS())
+	router.OPTIONS("/GetComplexOrders", controllers.CORS())
+	router.OPTIONS("/DeleteComplexOrder/:id", controllers.CORS())
 }

@@ -67,7 +67,7 @@ func GetPizza() gin.HandlerFunc {
 }
 func EditPizza() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+		ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
 		pizzaId := c.Param("id")
 		var Pizza models.Pizza
 		defer cancel()
